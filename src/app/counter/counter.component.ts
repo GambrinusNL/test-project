@@ -8,11 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-  @Input() count: number | undefined;
-  @Output() countChange = new EventEmitter<number>();
+  @Input() bla: number | undefined;
+  @Output() blaChange = new EventEmitter<number>();
   updateCount(amount: number): void {
-    // @ts-ignore
-    this.count += amount;
-    this.countChange.emit(this.count);
+    this.bla! += amount;
+    this.blaChange.emit(this.bla);
   }
 }
